@@ -1,0 +1,172 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme inline {
+	--radius-sm: calc(var(--radius) - 4px);
+	--radius-md: calc(var(--radius) - 2px);
+	--radius-lg: var(--radius);
+	--radius-xl: calc(var(--radius) + 4px);
+	--radius-2xl: calc(var(--radius) + 8px);
+	--radius-3xl: calc(var(--radius) + 12px);
+	--radius-4xl: calc(var(--radius) + 16px);
+
+	--color-foreground: var(--foreground);
+	--color-card: var(--card);
+	--color-card-foreground: var(--card-foreground);
+	--color-popover: var(--popover);
+	--color-popover-foreground: var(--popover-foreground);
+
+	--color-primary-foreground: var(--primary-foreground);
+
+	--color-secondary-foreground: var(--secondary-foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+
+	--color-accent-foreground: var(--accent-foreground);
+	--color-destructive: var(--destructive);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--color-chart-1: var(--chart-1);
+	--color-chart-2: var(--chart-2);
+	--color-chart-3: var(--chart-3);
+	--color-chart-4: var(--chart-4);
+	--color-chart-5: var(--chart-5);
+	--color-sidebar: var(--sidebar);
+	--color-sidebar-foreground: var(--sidebar-foreground);
+	--color-sidebar-primary: var(--sidebar-primary);
+	--color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+	--color-sidebar-accent: var(--sidebar-accent);
+	--color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+	--color-sidebar-border: var(--sidebar-border);
+	--color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+	--radius: 0.625rem;
+
+	--background: oklch(0.145 0 0);
+	--foreground: oklch(0.985 0 0);
+	--card: oklch(0.205 0 0);
+	--card-foreground: oklch(0.985 0 0);
+	--popover: oklch(0.205 0 0);
+	--popover-foreground: oklch(0.985 0 0);
+	--primary: oklch(0.922 0 0);
+	--primary-foreground: oklch(0.205 0 0);
+	--secondary: oklch(0.269 0 0);
+	--secondary-foreground: oklch(0.985 0 0);
+	--muted: oklch(0.269 0 0);
+	--muted-foreground: oklch(0.708 0 0);
+	--accent: oklch(0.269 0 0);
+	--accent-foreground: oklch(0.985 0 0);
+	--destructive: oklch(0.704 0.191 22.216);
+	--border: oklch(1 0 0 / 10%);
+	--input: oklch(1 0 0 / 15%);
+	--ring: oklch(0.556 0 0);
+	--chart-1: oklch(0.488 0.243 264.376);
+	--chart-2: oklch(0.696 0.17 162.48);
+	--chart-3: oklch(0.769 0.188 70.08);
+	--chart-4: oklch(0.627 0.265 303.9);
+	--chart-5: oklch(0.645 0.246 16.439);
+	--sidebar: oklch(0.205 0 0);
+	--sidebar-foreground: oklch(0.985 0 0);
+	--sidebar-primary: oklch(0.488 0.243 264.376);
+	--sidebar-primary-foreground: oklch(0.985 0 0);
+	--sidebar-accent: oklch(0.269 0 0);
+	--sidebar-accent-foreground: oklch(0.985 0 0);
+	--sidebar-border: oklch(1 0 0 / 10%);
+	--sidebar-ring: oklch(0.556 0 0);
+}
+
+@theme {
+	/* --- Defaults --- */
+	--color-text: oklch(93.4% 0.01 67.7);
+	--color-background: oklch(21.37% 0.013 204.69);
+	--color-primary: oklch(37.2% 0.057 177.66);
+	--color-secondary: oklch(29.1% 0.055 84.87);
+	--color-accent: oklch(78.21% 0.169 109.74);
+
+	/* --- Text Shades --- */
+	--color-text-50: oklch(96.34% 0.006 59.65);
+	--color-text-100: oklch(92.77% 0.011 71.89);
+	--color-text-200: oklch(85.22% 0.023 67.51);
+	--color-text-300: oklch(77.75% 0.035 68.71);
+	--color-text-400: oklch(70.01% 0.05 66.87);
+	--color-text-500: oklch(62.29% 0.063 67.09);
+	--color-text-600: oklch(53.01% 0.053 66.28);
+	--color-text-700: oklch(43.43% 0.04 67.89);
+	--color-text-800: oklch(33.15% 0.029 66.57);
+	--color-text-900: oklch(22.25% 0.016 71.16);
+	--color-text-950: oklch(16.13% 0.01 75.13);
+
+	/* --- Background Shades --- */
+	--color-background-50: oklch(96.37% 0.006 211.04);
+	--color-background-100: oklch(92.98% 0.011 204.12);
+	--color-background-200: oklch(85.86% 0.022 204.02);
+	--color-background-300: oklch(78.65% 0.033 203.93);
+	--color-background-400: oklch(71.34% 0.044 203.85);
+	--color-background-500: oklch(63.94% 0.055 205.23);
+	--color-background-600: oklch(54.46% 0.045 203.83);
+	--color-background-700: oklch(44.53% 0.036 203.83);
+	--color-background-800: oklch(34.01% 0.026 203.83);
+	--color-background-900: oklch(22.58% 0.014 203.85);
+	--color-background-950: oklch(16.35% 0.008 211.15);
+
+	/* --- Primary Shades --- */
+	--color-primary-50: oklch(97.09% 0.015 181.79);
+	--color-primary-100: oklch(94.31% 0.029 183.34);
+	--color-primary-200: oklch(88.77% 0.057 181.04);
+	--color-primary-300: oklch(83.47% 0.083 180.23);
+	--color-primary-400: oklch(78.45% 0.105 178.2);
+	--color-primary-500: oklch(73.84% 0.121 176.43);
+	--color-primary-600: oklch(62.64% 0.102 176.28);
+	--color-primary-700: oklch(50.95% 0.081 177.02);
+	--color-primary-800: oklch(38.5% 0.059 176.95);
+	--color-primary-900: oklch(25% 0.034 179.41);
+	--color-primary-950: oklch(17.69% 0.021 178.77);
+
+	/* --- Secondary Shades --- */
+	--color-secondary-50: oklch(97.68% 0.021 88.72);
+	--color-secondary-100: oklch(95.17% 0.042 87.36);
+	--color-secondary-200: oklch(90.5% 0.082 87.21);
+	--color-secondary-300: oklch(86.05% 0.118 86.45);
+	--color-secondary-400: oklch(81.85% 0.145 84.48);
+	--color-secondary-500: oklch(77.93% 0.158 80.26);
+	--color-secondary-600: oklch(66.07% 0.133 80.63);
+	--color-secondary-700: oklch(53.66% 0.107 81.18);
+	--color-secondary-800: oklch(40.47% 0.079 82.16);
+	--color-secondary-900: oklch(26.09% 0.048 84.77);
+	--color-secondary-950: oklch(18.06% 0.032 90.7);
+
+	/* --- Accent Shades --- */
+	--color-accent-50: oklch(98.82% 0.029 106.91);
+	--color-accent-100: oklch(97.99% 0.058 107.42);
+	--color-accent-200: oklch(96.24% 0.112 108.33);
+	--color-accent-300: oklch(94.75% 0.156 109.05);
+	--color-accent-400: oklch(93.5% 0.187 109.53);
+	--color-accent-500: oklch(92.47% 0.2 109.74);
+	--color-accent-600: oklch(78.21% 0.169 109.74);
+	--color-accent-700: oklch(63.26% 0.136 109.73);
+	--color-accent-800: oklch(47.36% 0.101 109.7);
+	--color-accent-900: oklch(29.96% 0.062 109.63);
+	--color-accent-950: oklch(20.28% 0.04 109.48);
+}
+
+@layer base {
+	* {
+		@apply border-border outline-ring/50;
+	}
+	body {
+		@apply bg-background text-foreground;
+		font-family: var(--font-montserrat), sans-serif;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: var(--font-lora), serif;
+	}
+}
